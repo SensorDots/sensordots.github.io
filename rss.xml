@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:schema="http://schema.org/" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" version="2.0" xml:base="http://sensordots.org/">
+  <channel>
+    <title>SensorDots - Small, Smart, Simple Sensors</title>
+    <link>http://sensordots.org/</link>
+    <description/>
+    <language>en</language>
+    
+    <item>
+  <title>Newsletter 5 - Social Distancing Badge Kickstarter</title>
+  <link>http://sensordots.org/node/51</link>
+  <description>&lt;span&gt;Newsletter 5 - Social Distancing Badge Kickstarter&lt;/span&gt;
+
+            &lt;div&gt;&lt;p&gt;We just launched a Kickstarter for the SensorDots Social Distancing Badge!&lt;/p&gt;
+
+&lt;p&gt;The Social Distancing Badge is an Arduino based LiDAR badge that measures and displays the distance between you and other objects. &lt;span&gt;&lt;span&gt;It features a lightweight and low power design that can be pinned to your bag, backpack, shirt or even be used as a belt buckle or hair clip. &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Here's some more of the features:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;span&gt;&lt;span&gt;Customisable Arduino based firmware (328PB microcontroller).&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span&gt;&lt;span&gt;Eye-safe VL53L1 LiDAR sensor.&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span&gt;&lt;span&gt;Micro USB serial and programming interface, as well as recharging.&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span&gt;&lt;span&gt;Hackable GPIO interface.&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span&gt;&lt;span&gt;100mAh rechargeable button cell lithium battery.&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span&gt;&lt;span&gt;Optional lanyard or safety pin attachment points (badge includes solderable safety pin to clip to a shirt or jacket and 3.2mm holes on the top).&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span&gt;&lt;span&gt;57mm x 38mm x 10mm badge size (thickness includes battery).&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span&gt;&lt;span&gt;Low power and easy to read 4 digit LCD display.&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span&gt;&lt;span&gt;Status/indicator LED and charging LED.&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span&gt;&lt;span&gt;Mode switching button.&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Check out the campaign here - &lt;a href="https://www.kickstarter.com/projects/sensordots/the-social-distancing-badge"&gt;https://www.kickstarter.com/projects/sensordots/the-social-distancing-badge&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+      &lt;span&gt;&lt;span lang="" about="http://sensordots.org/user/1" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;sensordots-admin&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;Tue, 03/31/2020 - 09:50&lt;/span&gt;
+</description>
+  <pubDate>Tue, 31 Mar 2020 09:50:03 +0000</pubDate>
+    <dc:creator>sensordots-admin</dc:creator>
+    <guid isPermaLink="false">51 at http://sensordots.org</guid>
+    </item>
+
+  </channel>
+</rss>

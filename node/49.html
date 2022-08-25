@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# schema: http://schema.org/ sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema# ">
+<!-- Mirrored from sensordots.org/node/49 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Aug 2022 11:22:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8" /><meta name="description" content="Port MuxR I2C Interface
+Most of the features of the Port MuxR in the serial menu are accessible as I2C registers. Commands with a get description denote a read command with expected response and commands with a set description denote a write command without a response. To simplify the firmware, the bytes below are all sent and returned as their ASCII representation (e.g. sending the number 1 should be sent as 0x31)." /><meta name="keywords" content="SensorDots Sensor Dots Small Smart Simple Sensors Filtering Polling Crosstalk Automatic Address Addressing Bus Easy Processing" /><meta name="Generator" content="Drupal 8 (https://www.drupal.org)" /><meta name="MobileOptimized" content="width" /><meta name="HandheldFriendly" content="true" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="shortcut icon" href="../sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" /><link rel="canonical" href="../portmuxr_i2c.html" /><link rel="shortlink" href="49.html" /><link rel="revision" href="../portmuxr_i2c.html" /><title>Port MuxR I2C Interface | SensorDots</title><link rel="stylesheet" media="all" href="../sites/default/files/css/css_RJqZCut1W0h7YRAwy_VGhC4L7Kaay-HAQBzYzaGiHNA.css" /><link rel="stylesheet" media="all" href="../sites/default/files/css/css_TqP0rzTeinXkupgUr1mR41ebkMj_f9DCOzD1rEBC4ZY.css" /> <!--[if lte IE 8]><script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script><![endif]--></head><body class="path-node page-node-type-page"> <a href="#main-content" class="visually-hidden focusable skip-link"> Skip to main content </a><div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas> <header class="main-header"> <nav class="navbar navbar-default" role="navigation"><div class="container"><div class="row"><div class="navbar-header col-md-3"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button><div class="region region-header"><div id="block-drupal8-zymphonies-theme-branding" class="site-branding block block-system block-system-branding-block"><div class="brand logo"> <a href="../index.html" title="Home" rel="home" class="site-branding__logo"> <img src="../sites/default/files/logo-big.png" alt="Home" /> </a></div></div></div></div><div class="col-md-9"><div class="region region-primary-menu"><div class="search-block-form block block-search" data-drupal-selector="search-block-form" id="block-drupal8-zymphonies-theme-search" role="search"><h2 class="visually-hidden">Search</h2><form action="http://sensordots.org/search/node" method="get" id="search-block-form" accept-charset="UTF-8"><div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label"> <label for="edit-keys" class="visually-hidden">Search</label> <input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search" /></div><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit" /></div></form></div><nav role="navigation" aria-labelledby="block-drupal8-zymphonies-theme-main-menu-menu" id="block-drupal8-zymphonies-theme-main-menu"><h2 class="visually-hidden" id="block-drupal8-zymphonies-theme-main-menu-menu">Main navigation</h2><ul class="sm menu-base-theme" id="main-menu" class="menu nav navbar-nav"><li class="active"> <a href="../index.html" data-drupal-link-system-path="&lt;front&gt;">Home</a></li><li> <a href="../about.html" data-drupal-link-system-path="node/2">About</a></li><li> <a href="https://www.tindie.com/stores/blecky/">Store</a></li><li> <a href="../dots.html" data-target="#" data-toggle="dropdown">Dots</a><ul><li> <a href="../mappydot.html" data-drupal-link-system-path="node/3">MappyDot</a></li><li> <a href="../mappydot_plus.html" data-drupal-link-system-path="node/32">MappyDot+</a></li></ul></li><li> <a href="../tools.html" data-target="#" data-toggle="dropdown">Tools</a><ul><li> <a href="../devboard.html" data-drupal-link-system-path="node/9">Dev Board</a></li><li> <a href="../mounting_board.html">Mounting Board</a></li><li> <a href="../port_multiplexer.html">Port MuxR</a></li></ul></li><li> <a href="../docs.html">Docs</a></li><li> <a href="https://github.com/SensorDots">Repo</a></li><li> <a href="https://hackaday.io/project/25571-mappydot">Blog</a></li><li> <a href="../custom.html">Custom Design</a></li></ul> </nav></div></div></div></div> </nav> </header><div class="container"><div class="row"><div class="col-md-12"><div class="region region-highlighted"><div data-drupal-messages-fallback class="hidden"></div></div></div></div></div><div id="wrapper"><div class="container"><div class="row"><div class="col-md-12"></div></div><div class="row layout"><div class="content_layout"><div class=col-md-12><div class="region region-content"><div id="block-drupal8-zymphonies-theme-content" class="block block-system block-system-main-block"> <article data-history-node-id="49" role="article" about="/portmuxr_i2c" typeof="schema:WebPage" class="node node--type-page node--view-mode-full"> <span property="schema:name" content="Port MuxR I2C Interface" class="hidden"></span><div class="node__content"><div property="schema:text"><h2>Port MuxR I2C Interface</h2><p>Most of the features of the Port MuxR in the serial menu are accessible as I2C registers. Commands with a get description denote a read command with expected response and commands with a set description denote a write command without a response. To simplify the firmware, the bytes below are all sent and returned as their ASCII representation (e.g. sending the number 1 should be sent as 0x31). Commands should have at least a 10ms delay between each one to make sure the Port MuxR has processed the previous command (new commands will be ignored if the previous hasn't completed).</p><p>The I2C address is configurable through the I2C ADDR header. The binary values of this header can be used to change the I2C slave address. The I2C base slave address starts at 0x50 and you short a pin to add the binary value to the base address (e.g. no shorts = 0x50, 4+1 shorted = 0x55).</p><p>The following are the list of write registers available:</p><pre>
+a<em>(0x61)</em>[s]      - set all ports to state
+                  e.g. a1 - all ports on
+p<em>(0x70)</em>[p][c][s]- set port to state
+                  e.g. p2a1 - port 2 channel a on
+v<em>(0x76)</em>[p][s]   - set vcc, alternative to p[p]v[s]
+                  e.g. v21 - port 2 vcc on
+s<em>(0x73)</em>         - get port and vcc states. Will store 3 bytes in a read register that must be read in a 
+                  separate I2C request command after 20ms.
+g<em>(0x67)</em>[g][p][c]- add port to group
+                  e.g. g21b - add port 1-b to group 2
+G<em>(0x47)</em>[g][p][c]- remove port from group
+x<em>(0x78)</em>[g][s]   - set group
+                  e.g. x21 - group 2 on
+r<em>(0x72)</em>         - reset group mappings
+m<em>(0x6d)</em>[m]      - set operation mode
+                  e.g. m1 - set break before make
+d<em>(0x64)</em>[ms]     - mode switch delay ms&lt;=900 - this is a delay between performing a make/break switching operation. Ms is 
+                  as 1 to 3 ascii bytes representing the decimal value. E.g. 123 is sent as <em>0x31,0x32,0x33.</em>
+z<em>(0x7a)</em>         - check firmware version. Returns 5 ascii bytes.
+[options]       - s = state (1<em>(0x31)</em>=on/0<em>(0x30)</em>=off) [ascii byte]
+                  p = port (1<em>(0x31)</em>-8<em>(0x38)</em>) [ascii byte]
+                  c = channel (a<em>(0x61)</em>/b(<em>(0x62)</em>/v<em>(0x76)</em>=vcc) [ascii byte]
+                  g = group number (1<em>(0x31)</em>-9<em>(0x39)</em>) [ascii byte]
+                  m = mode (0<em>(0x30)</em> = manual toggle,
+                            1<em>(0x31)</em> = break-before-make,
+                            2<em>(0x32)</em> = make-before-break) [ascii byte]
+</pre><p>The latest return bytes for some commands above will be stored in a read register. To retrieve them, perform an I2C read command and the Port MuxR will return the number of bytes belonging to the latest command send that expects return values (see example below).</p><p>To get you started, here are some c helper definitions:</p><pre>
+/* Function Registers */
+#define SET_ALL_PORTS  0x61
+#define SET_PORT       0x70
+#define SET_VCC        0x76
+#define GET_PORTS      0x73
+#define ADD_PORT_GROUP 0x67
+#define DEL_PORT_GROUP 0x47
+#define SET_GROUP      0x78
+#define RESET_GROUPS   0x72
+#define CHECK_FIRM     0x7a
+#define MODE_DELAY     0x64
+#define SET_MODE       0x6d
+
+/* State Bytes */
+#define STATE_ON       0x31
+#define STATE_OFF      0x30
+
+/* Channel Bytes */
+#define CHANNEL_A      0x61
+#define CHANNEL_B      0x62
+#define CHANNEL_VCC    0x76
+
+/* Mode Bytes */
+#define MANUAL_TOG     0x30
+#define BREAK_B4_MAKE  0x31
+#define MAKE_B4_BREAK  0x32
+
+#define ADDRESS 0x50
+
+/* Port Byte Helper */
+uint8_t PORT(uint8_t port_num)
+{
+  if (port_num &gt; 0 &amp;&amp; port_num &lt;= 8) return port_num + 0x30;
+}
+
+/* Group Byte Helper */
+uint8_t GROUP(uint8_t group_num)
+{
+  if (group_num &gt; 0 &amp;&amp; group_num &lt;= 9) return group_num + 0x30;
+}</pre><p>And here is a quick Arduino example to cycle through and toggle the VCC ports and retrieve port status using the above helper definitions (default address of 0x50):</p><pre>
+  for (int i = 1; i &lt;= 8; i++)
+  {
+    /* Set VCC On */
+    Wire.beginTransmission(ADDRESS);
+    Wire.write(SET_PORT);
+    Wire.write(PORT(i));
+    Wire.write(CHANNEL_VCC);
+    Wire.write(STATE_ON);
+    Wire.endTransmission();
+    
+    delay(10); //Minimum delay between I2C transactions    
+
+    /* Get port status */
+    Wire.beginTransmission(ADDRESS);
+    Wire.write(GET_PORTS);
+    Wire.endTransmission();
+    delay(20); //Wait for previous command to finish
+    Wire.requestFrom(ADDRESS, 3);
+    Serial.print(Wire.read());
+    Serial.print(Wire.read());
+    Serial.println(Wire.read());
+    
+
+    delay(200);
+    
+    /* Set VCC Off */
+    Wire.beginTransmission(ADDRESS);
+    Wire.write(SET_PORT);
+    Wire.write(PORT(i));
+    Wire.write(CHANNEL_VCC);
+    Wire.write(STATE_OFF);
+    Wire.endTransmission();
+
+    delay(200);
+  }
+</pre></div></div></article></div></div></div></div></div></div></div><div class="footer-menu"><div class="container"><div class="row"><div class="col-sm-6 col-md-6"><div class="region region-footer-menu"> <nav role="navigation" aria-labelledby="block-drupal8-zymphonies-theme-footer-menu" id="block-drupal8-zymphonies-theme-footer"><h2 class="visually-hidden" id="block-drupal8-zymphonies-theme-footer-menu">Footer menu</h2><ul class="menu"><li class="menu-item"> <a href="../contact.html" data-drupal-link-system-path="contact">Contact</a></li><li class="menu-item"> <a href="../disclaimers.html">Disclaimers</a></li><li class="menu-item"> <a href="../news.html">News</a></li><li class="menu-item"> <a href="../privacy.html">Privacy Policy</a></li><li class="menu-item"> <a href="../newsletter/subscriptions.html" data-drupal-link-system-path="newsletter/subscriptions">Subscriptions</a></li></ul> </nav></div></div><div class="col-sm-6 col-md-6"><div class="social-media"> <a href="https://twitter.com/sensordots" class="twitter" target="_blank" ><i class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/company/18254750/" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a></div></div></div></div></div><div class="copyright"><div class="container"><div class="row"><div class="col-sm-6 col-md-6"><p>Copyright © SensorDots 2020</p></div></div></div></div></div><script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/49","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"classy\/node,colorbox\/default,colorbox_inline\/colorbox_inline,core\/html5shiv,drupal8_zymphonies_theme\/bootstrap,drupal8_zymphonies_theme\/flexslider,drupal8_zymphonies_theme\/fontawesome,drupal8_zymphonies_theme\/global-components,drupal8_zymphonies_theme\/smartmenus,system\/base","theme":"drupal8_zymphonies_theme","theme_token":null},"ajaxTrustedUrl":{"\/search\/node":true},"colorbox":{"transition":"elastic","speed":350,"opacity":0.8,"slideshow":false,"slideshowAuto":true,"slideshowSpeed":2500,"slideshowStart":"start slideshow","slideshowStop":"stop slideshow","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","overlayClose":true,"returnFocus":true,"maxWidth":"80%","maxHeight":"80%","initialWidth":"300","initialHeight":"250","fixed":true,"scrolling":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"user":{"uid":0,"permissionsHash":"e3ab66e5440975c4c1130bb59a86f381def0e44af11e4b8bc2031e564626f57f"}}</script><script src="../../ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="../sites/default/files/js/js_z8MKdK9rPFI4grt3IiJcmfRC3e2SqIgyx3dIX8GONAo.js"></script></body>
+<!-- Mirrored from sensordots.org/node/49 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Aug 2022 11:22:49 GMT -->
+</html>
